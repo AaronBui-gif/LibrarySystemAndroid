@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     // Redirect to homepage after login success
                                     Intent intent = new Intent(getApplicationContext(), Home.class);
+
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
