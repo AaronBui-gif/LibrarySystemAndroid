@@ -2,7 +2,10 @@ package com.example.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,17 +29,10 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    CarouselView carouselView;
     Button loginBtn;
     TextView signupBtn;
     EditText personName, personPassword;
-    private int[] mImages = new int[] {
-            R.drawable.bear, R.drawable.penguin
-    };
 
-    private String[] mImagesTitle = new String[] {
-            "Bear", "Penguin"
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
                                 if(jsonObject.getString("status").equals("Success")) {
+                                    SharedPreferences sharedPreferences = getSharedPreferences("Profile", Context.MODE_PRIVATE);
+                                    @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                                    JSONObject userJsonObject = new JSONObject(jsonObject.getString("user"));
+
+                                    editor.putString("userId", userJsonObject.getString("_id"));
+                                    editor.putString("username", userJsonObject.getString("username"));
+                                    editor.apply();
+
                                     Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
                                     // Redirect to homepage after login success

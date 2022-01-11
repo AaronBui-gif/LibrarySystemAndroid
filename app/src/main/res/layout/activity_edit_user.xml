@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditUser">
+    tools:context=".EditUserActivity">
     <Button
         android:id="@+id/BackButton"
         android:layout_width="wrap_content"
@@ -16,28 +16,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_my_account"
         android:layout_width="109dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="55dp"
         android:text="My Account"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/Editbutton"
         app:layout_constraintStart_toEndOf="@+id/BackButton"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/Editbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="Edit"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -50,7 +38,7 @@
         android:background="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_account"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView

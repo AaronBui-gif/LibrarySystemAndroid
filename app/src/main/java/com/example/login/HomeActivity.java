@@ -1,6 +1,8 @@
 package com.example.login;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,6 +29,9 @@ public class HomeActivity extends AppCompatActivity {
 
         imageViewCart = findViewById(R.id.image_view_cart);
         textViewUserNameTitle = findViewById(R.id.tv_username_title);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Profile", Context.MODE_PRIVATE);
+        textViewUserNameTitle.setText(sharedPreferences.getString("username", null));
 
         textViewUserNameTitle.setOnClickListener(new View.OnClickListener() {
             @Override
