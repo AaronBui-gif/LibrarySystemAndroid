@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class BookDatabase   extends SQLiteOpenHelper {
+public class BookDatabase extends SQLiteOpenHelper {
     private static final String NAME = "books.DB";
     private static final int VERSION = 1;
     public static final String TABLE_NAME = "books";

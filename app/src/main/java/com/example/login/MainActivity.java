@@ -68,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
 
                                     editor.putString("userId", userJsonObject.getString("_id"));
                                     editor.putString("username", userJsonObject.getString("username"));
+                                    editor.putString("address", userJsonObject.getString("address"));
+                                    editor.putString("firstname", userJsonObject.getString("firstname"));
+                                    editor.putString("lastname", userJsonObject.getString("lastname"));
+                                    editor.putString("phoneNumber", userJsonObject.getString("phoneNumber"));
+
                                     editor.apply();
 
                                     Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_SHORT).show();

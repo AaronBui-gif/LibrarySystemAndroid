@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MyAccountActivity extends AppCompatActivity {
 
     ImageView imageViewBack;
-    TextView textViewUserName, textViewEdit;
+    TextView textViewUserName, textViewEdit, textViewName, textViewAddress, textViewPhoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,23 +22,31 @@ public class MyAccountActivity extends AppCompatActivity {
         imageViewBack = findViewById(R.id.image_view_back);
         textViewEdit = findViewById(R.id.tv_edit);
         textViewUserName = findViewById(R.id.tv_username);
+        textViewName = findViewById(R.id.tv_name);
+        textViewAddress = findViewById(R.id.tv_andress);
+        textViewPhoneNumber = findViewById(R.id.tv_phone_number);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Profile", Context.MODE_PRIVATE);
+        textViewUserName.setText(sharedPreferences.getString("username", null));
+        String name = sharedPreferences.getString("firstname", null) + " " + sharedPreferences.getString("lastname", null);
+        textViewName.setText(name);
+        textViewAddress.setText(sharedPreferences.getString("address", null));
+        textViewPhoneNumber.setText(sharedPreferences.getString("phoneNumber", null));
 
         imageViewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
             }
         });
 
         textViewEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditUserActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EditAccountActivity.class);
                 startActivity(intent);
             }
         });
-
-        SharedPreferences sharedPreferences = getSharedPreferences("Profile", Context.MODE_PRIVATE);
-        textViewUserName.setText(sharedPreferences.getString("username", null));
     }
 }

@@ -43,7 +43,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/image_view_banner"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_personal_info" />
 
             <TextView
                 android:id="@+id/tv_my_account"
@@ -68,7 +68,7 @@
                  />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tv_personal_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
