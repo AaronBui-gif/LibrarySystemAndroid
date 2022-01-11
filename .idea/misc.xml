@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/button.xml" value="0.2078125" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.2078125" />
+        <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.2078125" />
         <entry key="app/src/main/res/layout/activity_book_detail.xml" value="0.1578125" />
         <entry key="app/src/main/res/layout/activity_books.xml" value="0.27977839335180055" />
         <entry key="app/src/main/res/layout/activity_checkout.xml" value="0.1" />
@@ -12,11 +15,12 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2884963768115942" />
         <entry key="app/src/main/res/layout/activity_logo_page.xml" value="0.2884963768115942" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14387031408308004" />
-        <entry key="app/src/main/res/layout/activity_search_book.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_search_book.xml" value="0.2299168975069252" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/activity_user_details.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/test_books.xml" value="0.16757246376811594" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="app/src/main/res/menu/activity_books.xml" value="0.22395833333333334" />
       </map>
     </option>

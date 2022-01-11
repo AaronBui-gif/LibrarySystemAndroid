@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Books">
+
+
+<!--    <include-->
+<!--        layout="@layout/toolbar"-->
+<!--        android:layout_width="413dp"-->
+<!--        android:layout_height="64dp"-->
+<!--        tools:layout_editor_absoluteX="-2dp"-->
+<!--        tools:layout_editor_absoluteY="-3dp" />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="413dp"
+        android:layout_height="83dp"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:src="@drawable/bear" />
+
+            <TextView
+                android:id="@+id/tvSystem"
+                android:layout_width="190dp"
+                android:layout_height="70dp"
+                android:text="Library System"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="10dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/supermarket" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvBooks"
+        android:layout_width="414dp"
+        android:layout_height="643dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
