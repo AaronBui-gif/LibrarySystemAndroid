@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Login</string>
+    <string name="app_name">Library System</string>
+    <string name="action_search">FilterListSearchView</string>
 </resources>

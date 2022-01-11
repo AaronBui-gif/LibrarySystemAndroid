@@ -11,6 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
+        <activity android:name=".Home"
+            android:exported="false" />
+        <activity android:name=".Books"
+            android:parentActivityName=".Home"
+            android:exported="false"/>
+        <activity android:name=".EditUser"
+            android:exported="false"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".Checkout"
             android:exported="false" />
@@ -24,7 +34,7 @@
             android:name=".Signup"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LogoPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
