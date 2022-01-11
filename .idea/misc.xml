@@ -3,21 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_book_detail.xml" value="0.1578125" />
-        <entry key="app/src/main/res/layout/activity_books.xml" value="0.27977839335180055" />
-        <entry key="app/src/main/res/layout/activity_checkout.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_edit_user.xml" value="0.18659420289855072" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.2572463768115942" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2884963768115942" />
-        <entry key="app/src/main/res/layout/activity_logo_page.xml" value="0.2884963768115942" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14387031408308004" />
-        <entry key="app/src/main/res/layout/activity_search_book.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.16770833333333332" />
-        <entry key="app/src/main/res/layout/activity_user_details.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/drawable/button.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/drawable/ic_cart.xml" value="0.34270833333333334" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/drawable/rectangle_border.xml" value="0.19479166666666667" />
+        <entry key="app/src/main/res/drawable/rounded_outline.xml" value="0.34270833333333334" />
+        <entry key="app/src/main/res/drawable/rounded_outline_bg_high_school.xml" value="0.27239583333333334" />
+        <entry key="app/src/main/res/drawable/rounded_outline_bg_higher_school.xml" value="0.34270833333333334" />
+        <entry key="app/src/main/res/drawable/rounded_outline_bg_lower_primary.xml" value="0.34270833333333334" />
+        <entry key="app/src/main/res/drawable/rounded_outline_bg_upper_primary.xml" value="0.34270833333333334" />
+        <entry key="app/src/main/res/layout/activity_book_detail.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_books.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/activity_checkout.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_edit_user.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_logo_page.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_my_account.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_search_book.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_search_books.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.24592391304347827" />
+        <entry key="app/src/main/res/layout/activity_user_details.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/test_books.xml" value="0.16757246376811594" />
-        <entry key="app/src/main/res/menu/activity_books.xml" value="0.22395833333333334" />
       </map>
     </option>
   </component>

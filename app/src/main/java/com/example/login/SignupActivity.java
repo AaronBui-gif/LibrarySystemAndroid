@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -22,36 +23,36 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Signup extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
-    Button saveBtn, goBackBtn;
-    EditText name, password, repassword, age;
-    Boolean insert;
+    Button registerBtn;
+    EditText usernameEdt, passwordEdt, confirmPasswordEdt;
+    TextView signInTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        saveBtn = findViewById(R.id.saveBtn);
-        goBackBtn = findViewById(R.id.goBackBtn);
-        name = findViewById(R.id.editTextPersonName);
-        password = findViewById(R.id.editTextPassword);
-        repassword = findViewById(R.id.editTextRepassword);
-//        age = findViewById(R.id.editTextAge); no need age field
+        registerBtn = findViewById(R.id.btn_register);
+        usernameEdt = findViewById(R.id.edt_username);
+        passwordEdt = findViewById(R.id.edt_password);
+        confirmPasswordEdt = findViewById(R.id.edit_comfirm_password);
 
-        saveBtn.setOnClickListener(new View.OnClickListener() {
+        signInTextView = findViewById(R.id.tv_sign_in);
+
+        registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String url = "https://book-api-hoanganleba.vercel.app/auth/register";
-                String username = name.getText().toString();
-                String passwordSgn = password.getText().toString();
-                String repasswordSgn = repassword.getText().toString();
+                String username = usernameEdt.getText().toString();
+                String password = passwordEdt.getText().toString();
+                String confirmPassword = confirmPasswordEdt.getText().toString();
 
-                if (username.equals("") || repasswordSgn.equals("") || passwordSgn.equals("")) {
-                    Toast.makeText(Signup.this, "Cannot input empty", Toast.LENGTH_SHORT).show();
+                if (username.equals("") || confirmPassword.equals("") || password.equals("")) {
+                    Toast.makeText(SignupActivity.this, "Cannot input empty", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (passwordSgn.equals(repasswordSgn)) {
+                    if (password.equals(confirmPassword)) {
                         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
                         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                             @Override
@@ -90,23 +91,22 @@ public class Signup extends AppCompatActivity {
                             protected Map<String, String> getParams() {
                                 Map<String, String> params = new HashMap<String, String>();
                                 params.put("username", username);
-                                params.put("password", passwordSgn);
+                                params.put("password", password);
                                 return params;
                             }
                         };
                         requestQueue.add(stringRequest);
                     } else {
-                        Toast.makeText(Signup.this, "Passwords not matching", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupActivity.this, "Passwords not matching", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
 
-        goBackBtn.setOnClickListener(new View.OnClickListener() {
+        signInTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Signup.this, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }

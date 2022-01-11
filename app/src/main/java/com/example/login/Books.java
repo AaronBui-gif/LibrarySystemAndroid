@@ -25,17 +25,17 @@ public class Books extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        bookDatabase = new BookDatabase(this);
-        recyclerBook = findViewById(R.id.rcvBooks);
-        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
-        recyclerBook.setLayoutManager(linearLayout);
-
-        bookAdapter = new BookAdapter(getListBooks());
-        recyclerBook.setAdapter(bookAdapter);
-
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
-        recyclerBook.addItemDecoration(itemDecoration);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        bookDatabase = new BookDatabase(this);
+//        recyclerBook = findViewById(R.id.rcvBooks);
+//        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
+//        recyclerBook.setLayoutManager(linearLayout);
+//
+//        bookAdapter = new BookAdapter(getListBooks());
+//        recyclerBook.setAdapter(bookAdapter);
+//
+//        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+//        recyclerBook.addItemDecoration(itemDecoration);
     }
 
     private List<Book> getListBooks(){

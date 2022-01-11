@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,8 +17,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageClickListener;
-import com.synnapps.carouselview.ImageListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginBtn = findViewById(R.id.buttonLgn);
-        signupBtn = (TextView) findViewById(R.id.buttonSgn);
-        personName = findViewById(R.id.editTextPersonName);
-        personPassword = findViewById(R.id.editTextPassword);
+        loginBtn = findViewById(R.id.btn_login);
+        signupBtn = findViewById(R.id.tv_sign_in);
+        personName = findViewById(R.id.edt_username);
+        personPassword = findViewById(R.id.edt_password);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
                                     // Redirect to homepage after login success
-                                    Intent intent = new Intent(getApplicationContext(), Home.class);
+                                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
 
                                     startActivity(intent);
                                 } else {
@@ -111,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Signup.class);
+                Intent intent = new Intent(MainActivity.this, SignupActivity.class);
                 startActivity(intent);
             }
         });

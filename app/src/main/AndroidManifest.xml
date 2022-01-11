@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
-        <activity android:name=".Home"
+        <activity android:name=".MyAccountActivity" android:exported="false" />
+        <activity android:name=".HomeActivity"
             android:exported="false" />
         <activity android:name=".Books"
-            android:parentActivityName=".Home"
+            android:parentActivityName=".HomeActivity"
             android:exported="false"/>
         <activity android:name=".EditUser"
             android:exported="false"/>
@@ -22,19 +23,16 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Checkout"
+            android:name=".CheckoutActivity"
             android:exported="false" />
         <activity
             android:name=".BookDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".Signup"
-            android:exported="false" />
-        <activity
-            android:name=".LogoPage"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
