@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class BooksActivity extends AppCompatActivity {
         TextView textViewBookCategoryTitle = findViewById(R.id.tv_book_category_title);
         ImageView imageViewBack2 = findViewById(R.id.image_view_back2);
         ImageView imageViewCart = findViewById(R.id.image_view_cart);
+        SearchView searchViewBook = findViewById(R.id.search_view_book);
 
         imageViewBack2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +59,7 @@ public class BooksActivity extends AppCompatActivity {
         inflater = LayoutInflater.from(this);
 
         Intent intent = getIntent();
-        if(intent.hasExtra("category")) {
+        if (intent.hasExtra("category")) {
             Bundle extras = getIntent().getExtras();
             textViewBookCategoryTitle.setText(extras.getString("category"));
             String url = "https://book-api-hoanganleba.vercel.app/books?category=" + extras.getString("category");
@@ -67,6 +69,37 @@ public class BooksActivity extends AppCompatActivity {
             String url = "https://book-api-hoanganleba.vercel.app/books";
             fetchBooksData(url);
         }
+
+        searchViewBook.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                searchViewBook.clearFocus();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                linearLayoutBookList.removeAllViews();
+                String url;
+                if (s.equals("")) {
+                    if (intent.hasExtra("category")) {
+                        Bundle extras = getIntent().getExtras();
+                        url = "https://book-api-hoanganleba.vercel.app/books?category=" + extras.getString("category");
+                    } else {
+                        url = "https://book-api-hoanganleba.vercel.app/books";
+                    }
+                } else {
+                    if (intent.hasExtra("category")) {
+                        Bundle extras = getIntent().getExtras();
+                        url = "https://book-api-hoanganleba.vercel.app/books/search?title=" + s + "&category=" + extras.getString("category");
+                    } else {
+                        url = "https://book-api-hoanganleba.vercel.app/books/search?title=" + s;
+                    }
+                }
+                fetchBooksData(url);
+                return false;
+            }
+        });
     }
 
     public void fetchBooksData(String url) {
@@ -119,7 +152,7 @@ public class BooksActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
         requestQueue.add(jsonArrayRequest);

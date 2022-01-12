@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linear_layout_gradient"
         android:layout_width="0dp"
-        android:layout_height="155dp"
+        android:layout_height="130dp"
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,6 +21,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="12dp"
@@ -71,6 +72,23 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
+
+            <SearchView
+                android:id="@+id/search_view_book"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/rounded_outline_bg_white"
+                android:focusable="false"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@android:drawable/screen_background_light_transparent"
+                android:queryHint="Search ebooks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
