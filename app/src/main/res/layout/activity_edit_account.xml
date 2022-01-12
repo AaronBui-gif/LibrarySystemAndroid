@@ -44,7 +44,7 @@
                         app:srcCompat="@drawable/ic_arrow_left" />
 
                     <TextView
-                        android:id="@+id/tv_my_account"
+                        android:id="@+id/tv_edit_account"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Edit Account"

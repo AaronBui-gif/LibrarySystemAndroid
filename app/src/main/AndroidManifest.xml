@@ -14,7 +14,7 @@
         <activity android:name=".MyAccountActivity" android:exported="false" />
         <activity android:name=".HomeActivity"
             android:exported="false" />
-        <activity android:name=".Books"
+        <activity android:name=".BooksActivity"
             android:parentActivityName=".HomeActivity"
             android:exported="false"/>
         <activity android:name=".EditAccountActivity"

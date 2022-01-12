@@ -7,7 +7,7 @@
     tools:context=".BookDetailActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image_view_back_dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_arrow_left_dark" />
 
     <LinearLayout
-        android:id="@+id/linear_layout_gradient"
+        android:id="@+id/linear_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,14 +26,14 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/image_view_back_dark">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tv_you_have_an_account"
+                android:id="@+id/tv_book_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -41,12 +41,12 @@
                 android:text="60$"
                 android:textColor="#0E2ED3"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/image_view_banner"
-                app:layout_constraintTop_toBottomOf="@+id/tv_personal_info" />
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/image_view_book"
+                app:layout_constraintTop_toBottomOf="@+id/tv_book_author" />
 
             <TextView
-                android:id="@+id/tv_my_account"
+                android:id="@+id/tv_book_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -54,12 +54,12 @@
                 android:text="Lower Primary Level  1"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/image_view_banner"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/image_view_book"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/image_view_banner"
+                android:id="@+id/image_view_book"
                 android:layout_width="123dp"
                 android:layout_height="175dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -68,21 +68,21 @@
                  />
 
             <TextView
-                android:id="@+id/tv_personal_info"
+                android:id="@+id/tv_book_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="by None (Author)"
                 android:textColor="#606060"
-                app:layout_constraintStart_toEndOf="@+id/image_view_banner"
-                app:layout_constraintTop_toBottomOf="@+id/tv_my_account" />
+                app:layout_constraintStart_toEndOf="@+id/image_view_book"
+                app:layout_constraintTop_toBottomOf="@+id/tv_book_title" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_detail_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -92,10 +92,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear_layout_gradient" />
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
 
     <TextView
-        android:id="@+id/tv_username_title"
+        android:id="@+id/tv_book_detail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -106,10 +106,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_purchase"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

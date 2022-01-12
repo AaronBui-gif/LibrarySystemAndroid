@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutLowerPrimary, linearLayoutUpperPrimary, linearLayoutHighSchool, linearLayoutHigherSecondary;
+    LinearLayout linearLayoutLowerPrimary, linearLayoutUpperPrimary, linearLayoutHighSchool, linearLayoutHigherSecondary, linearLayoutBanner;
     ImageView imageViewCart;
     TextView textViewUserNameTitle;
 
@@ -26,6 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         linearLayoutUpperPrimary = findViewById(R.id.linear_layout_upper_primary);
         linearLayoutHighSchool = findViewById(R.id.linear_layout_high_school);
         linearLayoutHigherSecondary = findViewById(R.id.linear_layout_higher_secondary);
+        linearLayoutBanner = findViewById(R.id.linear_layout_banner);
 
         imageViewCart = findViewById(R.id.image_view_cart);
         textViewUserNameTitle = findViewById(R.id.tv_username_title);
@@ -41,31 +42,47 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        linearLayoutBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BooksActivity.class);
+                startActivity(intent);
+            }
+        });
+
         linearLayoutLowerPrimary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), BooksActivity.class);
+                intent.putExtra("category", "Lower Primary");
+                startActivity(intent);
             }
         });
 
         linearLayoutUpperPrimary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), BooksActivity.class);
+                intent.putExtra("category", "Upper Primary");
+                startActivity(intent);
             }
         });
 
         linearLayoutHighSchool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), BooksActivity.class);
+                intent.putExtra("category", "High School");
+                startActivity(intent);
             }
         });
 
         linearLayoutHigherSecondary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), BooksActivity.class);
+                intent.putExtra("category", "Higher Secondary");
+                startActivity(intent);
             }
         });
 
